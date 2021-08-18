@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="icon" href="" type="image/png">
+    <title>Mafalda</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/navfooterStyle.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/contactStyle.css">
+    <script src="https://kit.fontawesome.com/d9a8de9e4b.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
+    <link href="startup.css" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script type="text/javascript">
+    function sendEvent() {
+      console.log(
+        document.getElementById("email").value,
+        document.getElementById("name").value,
+        document.getElementById("message").value
+      );
+
+      Email.send({
+        name: document.getElementById("name").value,
+
+        Host: "smtp.elasticemail.com",
+
+        Username: "engagenreap@gmail.com",
+
+        Password: "0A7E9167B7F3B844088B1FFC2E83A1FACBD0",
+
+        To: "engagenreap@gmail.com",
+
+        Subject: document.getElementById("email").value + " Tried to contact",
+
+        From: "engagenreap@gmail.com",
+
+        Body:
+          document.getElementById("message").value +
+          " from " +
+          document.getElementById("email").value,
+      }).then(function (response) {
+        console.log(response);
+        if (response == "OK") {
+          alert("Mafalda in Spanish will be touch shortly");
+        } else {
+          throw new Error("Error: " + response);
+          console.log(response);
+        }
+      });
+    }
+  </script>
+  </head>
+
+  <body>
+
+    <!-- Navbar Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="150" height="50"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="courses.html">Courses <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+          <!-- Contact Map -->
+
+          <div class="contact_map">
+            <!-- Google Map -->
+    
+            <div class="map">
+              <div id="google_map" class="google_map">
+                <div class="map_container">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.1483731400635!2d-0.6599197842517538!3d51.80344947968493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48765bd21870cadd%3A0x5b1a37d36a1226d!2s7%20Meadowbrook%2C%20Tring%20HP23%205HR%2C%20UK!5e0!3m2!1sen!2sin!4v1599844796488!5m2!1sen!2sin"
+                    width="1600"
+                    height="450"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                  ></iframe>
+                  <div id="map"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Contact -->
+    
+          <div class="contact">
+            <div class="container">
+              <div class="row row-lg-eq-height">
+                <!-- Details -->
+                <div class="col-lg-6">
+                  <div class="contact_details">
+                    <div class="contact_details_title">Contact Details</div>
+                    <ul>
+                      <li>
+                        <svg
+                          fill="rgba(0,0,0,0.4)"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                          />
+                          <path d="M0 0h24v24H0z" fill="none" />
+                          <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                        </svg>
+                        <span>9;00 AM - 18:00 PM</span>
+                      </li>
+                      <li>
+                        <svg
+                          fill="rgba(0,0,0,0.4)"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0h24v24H0z" fill="none" />
+                          <path
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                          />
+                        </svg>
+                        <span>+44 7476721527</span>
+                      </li>
+                      <li>
+                        <svg
+                          fill="rgba(0,0,0,0.4)"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                          />
+                          <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                        <span>info@mafaldainspanishtuition.com</span>
+                      </li>
+                      <li>
+                        <svg
+                          fill="rgba(0,0,0,0.4)"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                          />
+                          <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                        <span>7 Meadowbrook HP235HR Tring,Hertfordshire</span>
+                      </li>
+                      <li
+                    </ul>
+                  </div>
+                </div>
+    
+                <!-- Form -->
+                <div class="col-lg-6">
+                  <div class="contact_form_container">
+                    <div class="form_title">Get in Touch</div>
+                    <form
+                      id="contact_form"
+                      onsubmit="event.preventDefault(); sendEvent();"
+                      class="contact_form"
+                    >
+                      <div class="row contact_row">
+                        <div class="col-lg-6 contact_col">
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form_input"
+                            placeholder="Name"
+                            required="required"
+                          />
+                        </div>
+                        <div class="col-lg-6 contact_col">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form_input"
+                            placeholder="Email"
+                            required="required"
+                          />
+                        </div>
+                        <div class="col-lg-12">
+                          <textarea
+                            class="form_input form_text"
+                            name="message"
+                            id="message"
+                            placeholder="Message"
+                            required="required"
+                          ></textarea>
+                        </div>
+                        <div class="col">
+                          <button
+                            type="submit"
+                            name="submit"
+                            class="form_button trans_200"
+                          >
+                            send message
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+              <h3>Mafalda</h3>
+              <p>Spanish lessons for all levels.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+              <h3>Follow Us</h3>
+              <p>Please follow us on our social media platform to stay tuned.</p>
+              <a href="https://www.facebook.com/MafaldainSpanishTutoring/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 segment-three">
+              <h3 id="Contact">Contact</h3>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> 7 Meadowbrook HP235HR Tring,Hertfordshire.</li>
+                <li><i class="fas fa-envelope-square"></i>  info@mafaldainspanishtuition.com</li>
+                <li><i class="fas fa-phone-square-alt"></i>  +44-7476721527</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-bottom-text">© 2021 Copyright & Developed by <a href="https://www.engagenreap.com" target="_blank">EnR Team</a></p>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
